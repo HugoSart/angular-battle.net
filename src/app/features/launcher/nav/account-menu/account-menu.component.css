@@ -1,0 +1,108 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.option {
+  height: 21px;
+  padding: 4px 12px;
+  border: rgba(255, 255, 255, 0.15) solid 1px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.1s;
+}
+
+.option fa {
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.option a {
+  opacity: 0.7;
+}
+
+.option:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: border-color 0.1s;
+}
+
+.option:hover fa {
+  opacity: 0.9;
+}
+
+.option:hover a {
+  opacity: 0.9;
+}
+
+.option:active fa {
+  opacity: 0.4;
+  transform: translateX(1px) translateY(1px);
+}
+
+.option:active a {
+  opacity: 0.4;
+  transform: translateX(1px) translateY(1px);
+}
+
+.profile fa {
+  font-size: 10px;
+  opacity: 0.25!important;
+  margin-left: 4px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile a {
+  padding-left: 10px;
+}
+
+.account {
+  position: absolute;
+  left: -27px;
+  top: -6px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-image: url("../../../../../assets/img/garrosh-profile.jpg");
+  background-size: cover;
+}
+
+.account:hover {
+  border: #449eff solid 1px;
+}
+
+.account fa {
+  color: #449eff;
+  font-size: 20px;
+  opacity: 0!important;
+  margin: 0!important;
+}
+
+.account:hover fa {
+  opacity: 1!important;
+}
+
+.status {
+  pointer-events: none;
+  position: absolute;
+  background-color: #0eff17;
+  border-radius: 100%;
+  width: 11px;
+  height: 11px;
+  left: 0;
+  top: 22px;
+  border: rgba(7, 11, 58, 0.8) solid 2px;
+}

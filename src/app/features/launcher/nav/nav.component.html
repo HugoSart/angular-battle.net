@@ -1,0 +1,21 @@
+<div class="anchor"></div>
+<div class="content">
+
+  <div class="logo">
+    <img src="assets/img/blizzard-logo.png" alt="Blizzard Logo">
+    <fa name="chevron-down"></fa>
+  </div>
+
+  <div class="tabs">
+    <div *ngFor="let tab of (tabs$ | async)" class="tab"
+         [ngClass]="{selected: (selectedTab$ | async)?.name === tab?.name}"
+         (click)="select(tab)">
+      {{tab.name}}
+    </div>
+  </div>
+
+  <div class="actions">
+    <app-account-menu></app-account-menu>
+  </div>
+
+</div>

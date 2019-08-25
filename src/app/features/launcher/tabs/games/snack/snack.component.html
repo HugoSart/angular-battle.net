@@ -1,0 +1,24 @@
+<div class="content">
+
+  <!-- Groups -->
+  <div class="group" *ngFor="let group of (groups$ | async)">
+
+    <!-- Title -->
+      <a *ngIf="!small">{{group.name}}</a>
+      <div *ngIf="small" class="divider-container">
+        <div class="divider"></div>
+      </div>
+
+    <!-- Items -->
+    <div class="item" [ngClass]="{selected: (selectedGame$ | async)?.name === game?.name}" *ngFor="let game of group.games" (click)="select(game)">
+      <img [src]="game.icon" alt="{{game.name}} icon'">
+      <a *ngIf="!small">{{game.name}}</a>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <fa name="arrow-{{small ? 'right' : 'left'}}" class="state-icon" (click)="small = !small"></fa>
+</div>

@@ -1,0 +1,33 @@
+:host {
+  display: grid;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  /** Background **/
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /** Grid **/
+  grid-template-rows: 80px calc(100vh - 80px);
+  grid-template-areas:
+    "nav"
+    "content";
+}
+
+app-nav {
+  grid-area: nav;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+app-snack {
+
+}
